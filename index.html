@@ -3,34 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Perpustakaan Alifiah Fitri Ariani</title>
+    <title>Perpustakaan Dwi Putri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #00796B;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004D40;
+        }
+        .nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            background-color: #00695C;
+        }
+        .container {
+            padding: 20px;
+        }
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Perpustakaan Alifiah Fitri Ariani</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Homepage</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="welcome">
-            <h2>Selamat Datang di Perpustakaan Alifiah Fitri Ariani!</h2>
-            <p>Di sini, Anda akan menemukan repositori tugas-tugas yang saya kumpulkan selama mengikuti mata kuliah Pengembangan Web!</p>
-            <h3>Apa yang Ada di Sini?</h3>
-            <ul>
-                <li><strong>Repositori Tugas:</strong> Temukan berbagai tugas yang telah saya kerjakan, mulai dari proyek desain web hingga aplikasi sederhana. Setiap tugas dilengkapi dengan penjelasan singkat tentang tujuan dan hasilnya.</li>
-                <li><strong>Sumber Daya Pembelajaran:</strong> Kami juga menyediakan beberapa sumber daya yang dapat membantu Anda memahami lebih lanjut tentang pengembangan web, seperti artikel dan tutorial.</li>
-                <li><strong>Kolaborasi Perpustakaan:</strong> Kami bekerja sama dengan perpustakaan lain untuk memberikan akses lebih luas ke koleksi buku dan sumber daya. <a href="#">Perpustakaan Universitas Sumatera Utara</a></li>
-            </ul>
-            <h3>Cari Buku</h3>
-            <p>Gunakan fitur pencarian di bawah ini untuk menemukan buku yang Anda inginkan. Kami memiliki berbagai koleksi buku yang dapat Anda telusuri.</p>
-            <input type="text" placeholder="Cari buku...">
+    <div class="header">Perpustakaan Dwi Putri</div>
+    <div class="nav">
+        <a href="#home">Homepage</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="container" id="home">
+        <div class="box">
+            <h2>Selamat Datang di Perpustakaan Dwi Putri!</h2>
+            <p>Di sini, Anda akan menemukan berbagai sumber belajar, koleksi buku, dan repositori tugas yang dapat membantu Anda dalam mengeksplorasi pengetahuan lebih luas.</p>
         </div>
-    </main>
+    </div>
+
+    <div class="container" id="about">
+        <div class="box">
+            <h2>About Us</h2>
+            <p>Perpustakaan Dwi Putri adalah wadah bagi mahasiswa untuk mengakses berbagai sumber bacaan, materi kuliah, dan proyek pengembangan web. Kami berkomitmen untuk menyediakan konten yang bermanfaat bagi para pelajar.</p>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="box">
+            <h2>Contact Us</h2>
+            <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan, silakan hubungi kami melalui email: <strong>perpustakaan.dwi@gmail.com</strong></p>
+        </div>
+    </div>
 </body>
 </html>
