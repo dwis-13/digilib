@@ -7,13 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffe6f7;
+            background-color: #ffe6f0;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         .header {
-            background-color: #ff69b4;
+            background-color: #ff66b2;
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -22,7 +22,7 @@
         .nav {
             display: flex;
             justify-content: center;
-            background-color: #ff1493;
+            background-color: #ff3385;
         }
         .nav a {
             color: #fff;
@@ -30,7 +30,7 @@
             text-decoration: none;
         }
         .nav a:hover {
-            background-color: #ff85c0;
+            background-color: #ff4d94;
         }
         .container {
             padding: 20px;
@@ -39,43 +39,76 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
-        .link-perpusnas {
-            margin-top: 15px;
-            text-align: center;
+        h2, h3 {
+            color: #ff3385;
         }
-        .link-perpusnas a {
-            color: #ff1493;
-            font-weight: bold;
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff66b2;
+            color: #fff;
             text-decoration: none;
+            border-radius: 5px;
         }
-        .link-perpusnas a:hover {
-            text-decoration: underline;
+        .btn:hover {
+            background-color: #ff4d94;
         }
     </style>
 </head>
 <body>
-    <div class="header">Homepage</div>
+    <!-- Bagian Header -->
+    <div class="header">Perpustakaan Dwi Putri</div>
+    
+    <!-- Bagian Navigasi -->
     <div class="nav">
         <a href="index.html">Homepage</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
     </div>
+    
+    <!-- Konten Utama -->
     <div class="container">
+        <!-- Sambutan / Pengenalan -->
         <div class="box">
             <h2>Selamat Datang di Perpustakaan Dwi Putri</h2>
-            <p>Tempat terbaik untuk menemukan buku, jurnal, dan referensi yang kamu butuhkan!</p>
-            <div class="link-perpusnas">
-                <p>
-                    Untuk referensi yang lebih luas, kunjungi juga 
-                    <a href="https://www.perpusnas.go.id/" target="_blank">
-                        Perpustakaan Nasional Republik Indonesia
-                    </a>.
-                </p>
-            </div>
+            <p>
+                Temukan buku, jurnal, dan referensi terbaik untuk mendukung studi dan riset Anda. 
+                Perpustakaan Dwi Putri menyediakan layanan lengkap mulai dari koleksi fisik, akses 
+                jurnal online, hingga bimbingan akademik.
+            </p>
+            <p>
+                <strong>Jam Operasional:</strong><br>
+                Senin – Jumat: 08.00 – 16.00 WIB<br>
+                Sabtu, Minggu, & Hari Libur: Tutup
+            </p>
+            <a class="btn" href="about.html">Pelajari Lebih Lanjut</a>
+        </div>
+
+        <!-- Pengumuman / Berita Terbaru -->
+        <div class="box">
+            <h3>Pengumuman & Berita</h3>
+            <ul>
+                <li>Workshop Penulisan Ilmiah: 20 Maret 2025, pukul 10.00 - 12.00 WIB</li>
+                <li>Diskon Denda Keterlambatan 50% selama bulan ini</li>
+                <li>Koleksi Baru: Buku Digital tentang Pemrograman Web dan Desain UI/UX</li>
+            </ul>
+        </div>
+
+        <!-- Rekomendasi Buku / Koleksi Unggulan -->
+        <div class="box">
+            <h3>Rekomendasi Buku</h3>
+            <ul>
+                <li><strong>Atomic Habits</strong> - James Clear</li>
+                <li><strong>Metodologi Penelitian</strong> - Sugiyono</li>
+                <li><strong>Pengantar Teknologi Informasi</strong> - Eko Nugroho</li>
+            </ul>
+            <p>
+                <a class="btn" href="#">Lihat Koleksi Lengkap</a>
+            </p>
         </div>
     </div>
 </body>
 </html>
-
