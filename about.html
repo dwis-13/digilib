@@ -41,6 +41,27 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        /* Styling tabel */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ff66b2;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #ff66b2;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #ffe6f0;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +74,37 @@
     <div class="container">
         <div class="box">
             <h2>Tentang Perpustakaan Dwi Putri</h2>
-            <p>Perpustakaan Dwi Putri adalah pusat sumber daya belajar yang dirancang untuk mendukung mahasiswa dan pelajar dalam mendapatkan referensi yang relevan, materi pembelajaran, dan proyek pengembangan web. Kami menyediakan berbagai koleksi buku fisik maupun digital, serta repositori tugas-tugas mahasiswa untuk meningkatkan pemahaman akademik.</p>
+            <p>
+                Perpustakaan Dwi Putri adalah pusat sumber daya belajar yang dirancang untuk mendukung mahasiswa dan pelajar dalam mendapatkan referensi yang relevan, materi pembelajaran, dan proyek pengembangan web. Kami menyediakan berbagai koleksi buku fisik maupun digital, serta repositori tugas-tugas mahasiswa untuk meningkatkan pemahaman akademik.
+            </p>
+
+            <h3>Layanan Perpustakaan</h3>
+            <table>
+                <tr>
+                    <th>Layanan</th>
+                    <th>Deskripsi</th>
+                </tr>
+                <tr>
+                    <td>📖 Koleksi Buku</td>
+                    <td>Beragam buku fisik dan digital untuk referensi akademik dan umum.</td>
+                </tr>
+                <tr>
+                    <td>💻 Akses Jurnal Online</td>
+                    <td>Jurnal internasional dan nasional yang dapat diakses secara daring.</td>
+                </tr>
+                <tr>
+                    <td>📝 Repositori Tugas</td>
+                    <td>Kumpulan tugas mahasiswa yang bisa dijadikan contoh dan referensi.</td>
+                </tr>
+                <tr>
+                    <td>🧑‍🏫 Bimbingan Akademik</td>
+                    <td>Layanan konsultasi untuk membantu pemahaman materi kuliah dan riset.</td>
+                </tr>
+                <tr>
+                    <td>📚 Peminjaman Buku</td>
+                    <td>Sistem peminjaman buku dengan prosedur mudah dan cepat.</td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
