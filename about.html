@@ -41,6 +41,25 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            /* Animasi fade-in */
+            animation: fadeIn 1s ease forwards;
+        }
+        /* Menambahkan delay agar kotak muncul secara bergantian */
+        .container .box:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .container .box:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Styling tabel */
@@ -81,7 +100,6 @@
                 dan proyek pengembangan web. Kami menyediakan berbagai koleksi buku fisik maupun digital, 
                 serta repositori tugas-tugas mahasiswa untuk meningkatkan pemahaman akademik.
             </p>
-
             <!-- Jam Layanan -->
             <h3>Jam Layanan</h3>
             <p>Perpustakaan Dwi Putri beroperasi dengan jadwal sebagai berikut:</p>
