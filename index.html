@@ -7,62 +7,65 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f0ff; /* ungu muda */
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Animasi Header dan Footer */
+        @keyframes fadeSlide {
+            0% {opacity: 0; transform: translateY(-20px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+
         .header {
-            background-color: #a29bfe; /* ungu */
+            background: linear-gradient(90deg, #b19cd9, #a29bfe);
             color: white;
             padding: 20px;
             text-align: center;
             font-size: 28px;
+            animation: fadeSlide 1s ease-in-out;
         }
 
         .nav {
             display: flex;
             justify-content: center;
-            background-color: #dfe6e9; /* abu-abu muda */
+            background-color: #a29bfe;
+            animation: fadeSlide 1.2s ease-in-out;
         }
 
         .nav a {
-            color: #2d3436;
-            padding: 14px 20px;
+            color: white;
+            padding: 14px 24px;
             text-decoration: none;
             font-weight: bold;
+            transition: background 0.3s, color 0.3s;
         }
 
         .nav a:hover {
-            background-color: #b2bec3;
+            background-color: #dcd6f7;
+            color: #333;
         }
 
         .container {
-            padding: 20px;
+            padding: 30px 20px;
         }
 
         .box {
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            animation: fadeIn 1s ease forwards;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeSlide 1.4s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes flyBook {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(-2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+        .box h2 {
+            color: #6c5ce7;
         }
 
         .btn {
-            background-color: #a29bfe;
+            background-color: #6c5ce7;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -73,7 +76,7 @@
         }
 
         .btn:hover {
-            background-color: #6c5ce7;
+            background-color: #a29bfe;
             transform: scale(1.05);
         }
 
@@ -82,21 +85,22 @@
         }
 
         footer {
-            background-color: #dfe6e9;
-            color: #636e72;
+            background: linear-gradient(90deg, #d3d3d3, #e6e6e6);
+            color: #333;
             text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+            padding: 18px;
             font-size: 14px;
+            animation: fadeSlide 1.6s ease-in-out;
         }
 
-        .icon-container {
-            text-align: center;
-            margin-top: 20px;
+        ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        .icon-container svg {
-            animation: flyBook 3s infinite ease-in-out;
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -143,24 +147,11 @@
                 <a href="https://www.perpusnas.go.id/" target="_blank" style="color: #6c5ce7; text-decoration: underline;">
                 Perpustakaan Nasional RI</a> untuk koleksi digital nasional.
             </p>
-
-            <div class="icon-container">
-                <!-- Ikon Buku Terbang -->
-                <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12C4 9.79086 5.79086 8 8 8H28V52H8C5.79086 52 4 50.2091 4 48V12Z" fill="#a29bfe"/>
-                    <path d="M60 12C60 9.79086 58.2091 8 56 8H36V52H56C58.2091 52 60 50.2091 60 48V12Z" fill="#6c5ce7"/>
-                    <path d="M28 8L36 8V52H28V8Z" fill="#dcd6f7"/>
-                    <line x1="28" y1="30" x2="36" y2="30" stroke="#b2bec3" stroke-width="1"/>
-                    <line x1="28" y1="34" x2="36" y2="34" stroke="#b2bec3" stroke-width="1"/>
-                    <line x1="28" y1="38" x2="36" y2="38" stroke="#b2bec3" stroke-width="1"/>
-                    <line x1="28" y1="42" x2="36" y2="42" stroke="#b2bec3" stroke-width="1"/>
-                </svg>
-            </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2025 Perpustakaan Dwi Putri. Seluruh hak cipta dilindungi.
+        &copy; 2025 Perpustakaan Dwi Putri. All rights reserved.
     </footer>
 </body>
 </html>
