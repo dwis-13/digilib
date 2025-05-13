@@ -12,53 +12,56 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .header {
-            background-color: #b19cd9; /* Ungu muda */
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
+
+        /* Animasi Header dan Footer */
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
+
+        .header {
+            background: linear-gradient(90deg, #b19cd9, #a29bfe); /* Ungu muda ke ungu pastel */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            animation: fadeSlide 1s ease-in-out;
+        }
+
         .nav {
             display: flex;
             justify-content: center;
             background-color: #a29bfe; /* Ungu pastel */
+            animation: fadeSlide 1.2s ease-in-out;
         }
+
         .nav a {
-            color: #fff;
-            padding: 14px 20px;
+            color: white;
+            padding: 14px 24px;
             text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
         }
+
         .nav a:hover {
-            background-color: #dcd6f7; /* Ungu muda hover */
+            background-color: #dcd6f7;
             color: #333;
         }
+
         .container {
-            padding: 20px;
+            padding: 30px 20px;
         }
+
         .box {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease forwards;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeSlide 1.4s ease-in-out;
         }
-        .container .box:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        .container .box:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .box h2, .box h3 {
+            color: #6c5ce7;
         }
 
         /* Styling tabel */
@@ -67,28 +70,32 @@
             width: 100%;
             margin-top: 20px;
         }
+
         table, th, td {
             border: 1px solid #b19cd9;
         }
+
         th, td {
             text-align: left;
             padding: 8px;
         }
+
         th {
             background-color: #b19cd9;
-            color: #fff;
+            color: white;
         }
+
         tr:nth-child(even) {
             background-color: #f0e6ff; /* Ungu sangat muda */
         }
 
-        /* Footer */
         .footer {
-            background-color: #d3d3d3; /* Abu-abu */
+            background: linear-gradient(90deg, #d3d3d3, #e6e6e6); /* Abu-abu muda ke lebih terang */
             color: #333;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
             font-size: 14px;
+            animation: fadeSlide 1.6s ease-in-out;
         }
     </style>
 </head>
