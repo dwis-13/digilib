@@ -7,13 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffe6f0;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         .header {
-            background-color: #ff66b2;
+            background-color: #b19cd9;
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -22,7 +22,7 @@
         .nav {
             display: flex;
             justify-content: center;
-            background-color: #ff3385;
+            background-color: #a29bfe;
         }
         .nav a {
             color: #fff;
@@ -30,7 +30,8 @@
             text-decoration: none;
         }
         .nav a:hover {
-            background-color: #ff4d94;
+            background-color: #dcd6f7;
+            color: #333;
         }
         .container {
             padding: 20px;
@@ -39,96 +40,34 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease forwards;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Tambahkan delay untuk animasi tiap box agar muncul bergantian */
-        .container .box:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        .container .box:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-        .container .box:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        h2, h3 {
-            color: #ff3385;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ff66b2;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #ff4d94;
+        .footer {
+            background-color: #d3d3d3;
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <!-- Bagian Header -->
-    <div class="header">Perpustakaan Dwi Putri</div>
-    
-    <!-- Bagian Navigasi -->
+    <div class="header">Selamat Datang di Perpustakaan Dwi Putri</div>
     <div class="nav">
         <a href="index.html">Homepage</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
     </div>
-    
-    <!-- Konten Utama -->
     <div class="container">
-        <!-- Sambutan / Pengenalan -->
         <div class="box">
-            <h2>Selamat Datang di Perpustakaan Dwi Putri</h2>
+            <h2>Temukan Ilmu, Temukan Dirimu</h2>
             <p>
-                Temukan buku, jurnal, dan referensi terbaik untuk mendukung studi dan riset Anda. 
-                Perpustakaan Dwi Putri menyediakan layanan lengkap mulai dari koleksi fisik, akses 
-                jurnal online, hingga bimbingan akademik.
+                Selamat datang di website resmi Perpustakaan Dwi Putri! Di sini, Anda dapat menemukan informasi terbaru tentang koleksi, layanan, dan fasilitas perpustakaan kami.
             </p>
-            <p>
-                <strong>Jam Operasional:</strong><br>
-                Senin – Jumat: 08.00 – 16.00 WIB<br>
-                Sabtu: 09.00-13.00 WIB<br>
-                Minggu, & Hari Libur: Tutup
-            </p>
-            <a class="btn" href="about.html">Pelajari Lebih Lanjut</a>
         </div>
-
-        <!-- Pengumuman / Berita Terbaru -->
-        <div class="box">
-            <h3>Pengumuman & Berita</h3>
-            <ul>
-                <li>Workshop Penulisan Ilmiah: 20 Maret 2025, pukul 10.00 - 12.00 WIB</li>
-                <li>Diskon Denda Keterlambatan 50% selama bulan ini</li>
-                <li>Koleksi Baru: Buku Digital tentang Pemrograman Web dan Desain UI/UX</li>
-            </ul>
-        </div>
-
-        <!-- Rekomendasi Buku / Koleksi Unggulan -->
-        <div class="box">
-            <h3>Rekomendasi Buku</h3>
-            <ul>
-                <li><strong>Atomic Habits</strong> - James Clear</li>
-                <li><strong>Metodologi Penelitian</strong> - Sugiyono</li>
-                <li><strong>Pengantar Teknologi Informasi</strong> - Eko Nugroho</li>
-            </ul>
-        </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 Perpustakaan Dwi Putri. Seluruh hak cipta dilindungi.
     </div>
 </body>
 </html>
