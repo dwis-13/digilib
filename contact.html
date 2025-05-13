@@ -7,13 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffe6f7;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         .header {
-            background-color: #ff69b4;
+            background-color: #b19cd9;
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -22,7 +22,7 @@
         .nav {
             display: flex;
             justify-content: center;
-            background-color: #ff1493;
+            background-color: #a29bfe;
         }
         .nav a {
             color: #fff;
@@ -30,7 +30,8 @@
             text-decoration: none;
         }
         .nav a:hover {
-            background-color: #ff85c0;
+            background-color: #dcd6f7;
+            color: #333;
         }
         .container {
             padding: 20px;
@@ -40,42 +41,18 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            /* Animasi fade-in */
-            animation: fadeIn 1s ease forwards;
         }
-        /* Menambahkan delay agar animasi muncul secara bergantian */
-        .container .box:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .form-link {
+        .footer {
+            background-color: #d3d3d3;
+            color: #333;
             text-align: center;
-            margin-top: 20px;
-        }
-        .form-link a {
-            background-color: #ff1493;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .form-link a:hover {
-            background-color: #ff4d94;
+            padding: 15px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="header">Contact Us</div>
+    <div class="header">Hubungi Kami</div>
     <div class="nav">
         <a href="index.html">Homepage</a>
         <a href="about.html">About Us</a>
@@ -83,17 +60,17 @@
     </div>
     <div class="container">
         <div class="box">
-            <h2>Hubungi Kami</h2>
-            <p>Jika Anda memiliki pertanyaan atau ingin memberikan masukan, silakan hubungi kami melalui:</p>
+            <h2>Kontak Perpustakaan Dwi Putri</h2>
+            <p>Untuk pertanyaan, saran, atau informasi lebih lanjut, silakan hubungi kami melalui:</p>
             <ul>
-                <li>Email: info@perpustakaandwiputri.com</li>
-                <li>Telepon: (021) 123-4567</li>
-                <li>Alamat: Jl. Ilmu Pengetahuan No. 1, Kota Medan</li>
+                <li>📍 Alamat: Jl. Ilmu No. 10, Medan</li>
+                <li>📞 Telepon: (061) 123-4567</li>
+                <li>📧 Email: info@perpusdwiputri.ac.id</li>
             </ul>
-            <div class="form-link">
-                <a href="https://forms.gle/5Nd9aXzQa5UkT6cC9" target="_blank">Survey Kepuasan Pengguna</a>
-            </div>
         </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 Perpustakaan Dwi Putri. Seluruh hak cipta dilindungi.
     </div>
 </body>
 </html>
