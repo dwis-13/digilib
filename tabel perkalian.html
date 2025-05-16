@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tabel Perkalian Interaktif</title>
   <style>
     body {
@@ -14,44 +14,87 @@
 
     h2 {
       margin-bottom: 20px;
+      color: #5e4b8b; /* Ungu gelap */
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #b8aee0;
     }
 
     .table-container {
       overflow-x: auto;
       display: inline-block;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(94, 75, 139, 0.3);
+      border: 3px solid #7e6eb0; /* border ungu */
+      background-color: #e5e4e8; /* abu-abu muda */
+      padding: 15px;
     }
 
     table {
       border-collapse: collapse;
       min-width: 500px;
       width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(126, 110, 176, 0.3);
     }
 
     th, td {
-      border: 1px solid #ccc;
+      border: 1px solid #9a8ccf; /* ungu abu-abu */
       padding: 12px;
       text-align: center;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     th {
-      background-color: #003366;
+      background-color: #5e4b8b; /* ungu gelap */
       color: white;
+      user-select: none;
     }
 
     td:first-child,
     th:first-child {
-      background-color: #003366;
+      background-color: #5e4b8b; /* ungu gelap */
       color: white;
       font-weight: bold;
+      user-select: none;
+    }
+
+    td:hover {
+      background-color: #b8aee0; /* ungu muda */
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(126, 110, 176, 0.7);
+      color: #3a2d6d;
+      font-weight: 600;
     }
 
     .note {
       margin-top: 15px;
       font-style: italic;
-      color: #333;
+      color: #5e4b8b;
+      font-weight: 500;
+    }
+
+    /* Tombol navigasi */
+    .btn-home {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #7e6eb0, #b8aee0);
+      color: white;
+      font-weight: 600;
+      border-radius: 25px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(126, 110, 176, 0.4);
+      transition: background 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    .btn-home:hover {
+      background: linear-gradient(90deg, #b8aee0, #7e6eb0);
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(126, 110, 176, 0.7);
     }
 
     @media (max-width: 600px) {
@@ -59,10 +102,17 @@
         padding: 8px;
         font-size: 14px;
       }
+
+      .btn-home {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
+  <a href="index.html" class="btn-home" aria-label="Kembali ke Homepage">← Kembali ke Homepage</a>
+
   <h2>Tabel Perkalian 10x10 Interaktif</h2>
 
   <div class="table-container">
