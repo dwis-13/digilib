@@ -100,6 +100,62 @@
   transform: scale(1.05) translateY(-5px);
   cursor: pointer;
 }
+    .search-container {
+  max-width: 400px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 12px 50px 12px 15px;
+  font-size: 16px;
+  border: 2px solid #7e6eb0;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(126, 110, 176, 0.15);
+}
+
+input[type="search"]:focus {
+  border-color: #b8aee0;
+  box-shadow: 0 0 8px #b8aee0;
+}
+
+button.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #7e6eb0;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(126, 110, 176, 0.5);
+}
+
+button.search-btn:hover {
+  background: #b8aee0;
+  color: #3a2d6d;
+}
+
+#search-results {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  color: #3a2d6d;
+  font-weight: 600;
+}
+
+#search-results ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
 
     
     #cookieConsent button:hover {
@@ -129,10 +185,17 @@
   <div class="hero-section">
     Temukan Ilmu, Temukan Dirimu
   </div>
+<div class="search-container">
+  <input type="search" id="searchInput" placeholder="Cari koleksi, buku, atau apa saja..." aria-label="Kolom pencarian" />
+  <button class="search-btn" onclick="performSearch()" aria-label="Tombol cari">&#128269;</button>
+</div>
+
+<div id="search-results"></div>
 
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
+        
         <p>
           Perpustakaan Dwi Putri adalah tempat yang nyaman untuk belajar, berbagi, dan tumbuh. 
           Dengan suasana tenang dan koleksi digital yang lengkap, kami hadir untuk mendukung 
@@ -218,6 +281,42 @@
   </div>
 
   <script>
+    const collections = [
+  "Dasar Dasar Pemrograman",
+  "Flower Magazine",
+  "Novel Portfolio",
+  "Artificial Intelligence and Machine Learning Magazine",
+  "Tabel Perkalian Interaktif",
+  "HTML dan CSS untuk Pemula",
+  "JavaScript Lanjutan",
+  "Belajar Python",
+  "Database dan SQL",
+  "Pemrograman Mobile"
+];
+
+function performSearch() {
+  const input = document.getElementById('searchInput').value.toLowerCase().trim();
+  const resultsDiv = document.getElementById('search-results');
+
+  if (input === "") {
+    resultsDiv.innerHTML = "<p>Masukkan kata kunci untuk mencari koleksi.</p>";
+    return;
+  }
+
+  const filtered = collections.filter(item => item.toLowerCase().includes(input));
+
+  if (filtered.length === 0) {
+    resultsDiv.innerHTML = `<p>Tidak ditemukan koleksi untuk kata kunci "<strong>${input}</strong>".</p>`;
+  } else {
+    let listHTML = "<p>Ditemukan koleksi:</p><ul>";
+    filtered.forEach(item => {
+      listHTML += `<li>${item}</li>`;
+    });
+    listHTML += "</ul>";
+    resultsDiv.innerHTML = listHTML;
+  }
+}
+
     function acceptCookies() {
       localStorage.setItem("cookieAccepted", "true");
       document.getElementById("cookieConsent").style.display = "none";
