@@ -1,170 +1,196 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - Perpustakaan Dwi Putri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homepage - Perpustakaan Dwi Putri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+    }
 
-        /* Animasi Header dan Footer */
-        @keyframes fadeSlide {
-            0% {opacity: 0; transform: translateY(-20px);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
+    /* Header dan Navigasi */
+    .header {
+      background: linear-gradient(90deg, #b19cd9, #a29bfe);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      animation: fadeSlide 1s ease-in-out;
+      position: relative;
+      z-index: 10;
+    }
 
-        .header {
-            background: linear-gradient(90deg, #b19cd9, #a29bfe);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            animation: fadeSlide 1s ease-in-out;
-        }
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #a29bfe;
+      animation: fadeSlide 1.2s ease-in-out;
+      position: relative;
+      z-index: 10;
+    }
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: #a29bfe;
-            animation: fadeSlide 1.2s ease-in-out;
-        }
+    .nav a {
+      color: white;
+      padding: 14px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
 
-        .nav a {
-            color: white;
-            padding: 14px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s, color 0.3s;
-        }
+    .nav a:hover {
+      background-color: #dcd6f7;
+      color: #333;
+    }
 
-        .nav a:hover {
-            background-color: #dcd6f7;
-            color: #333;
-        }
+    /* Bagian gambar landscape dan teks */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 350px; /* tinggi hero */
+      background-image: url('gambar.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
 
-        .container {
-            padding: 30px 20px;
-        }
+    /* Konten utama */
+    .container {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        .box {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            animation: fadeSlide 1.4s ease-in-out;
-        }
+    .box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeSlide 1.4s ease-in-out;
+    }
 
-        .box h2 {
-            color: #6c5ce7;
-        }
+    .box h3 {
+      margin-top: 30px;
+      color: #6c5ce7;
+    }
 
-        .btn {
-            background-color: #6c5ce7;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+    .btn {
+      background-color: #6c5ce7;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-        .btn:hover {
-            background-color: #a29bfe;
-            transform: scale(1.05);
-        }
+    .btn:hover {
+      background-color: #a29bfe;
+      transform: scale(1.05);
+    }
 
-        a.btn-link {
-            text-decoration: none;
-        }
+    a.btn-link {
+      text-decoration: none;
+    }
 
-        footer {
-            background: linear-gradient(90deg, #d3d3d3, #e6e6e6);
-            color: #333;
-            text-align: center;
-            padding: 18px;
-            font-size: 14px;
-            animation: fadeSlide 1.6s ease-in-out;
-        }
+    footer {
+      background: linear-gradient(90deg, #d3d3d3, #e6e6e6);
+      color: #333;
+      text-align: center;
+      padding: 18px;
+      font-size: 14px;
+      animation: fadeSlide 1.6s ease-in-out;
+    }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-        li {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
+    li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
 
-        /* Gaya Gambar */
-        img.rounded-circle {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 50%;
-            display: block;
-            margin: 20px auto;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-    </style>
+    /* Animasi fadeSlide */
+    @keyframes fadeSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">Selamat Datang di Perpustakaan Dwi Putri</div>
 
-    <div class="nav">
-        <a href="index.html">Homepage</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="tabel perkalian.html">Multiplication Table</a>
+  <div class="header">Selamat Datang di Perpustakaan Dwi Putri</div>
+
+  <div class="nav">
+    <a href="index.html">Homepage</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="tabel perkalian.html">Multiplication Table</a>
+  </div>
+
+  <!-- Bagian gambar landscape dan teks -->
+  <div class="hero-section">
+    Temukan Ilmu, Temukan Dirimu
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <p>
+        Perpustakaan Dwi Putri adalah tempat yang nyaman untuk belajar, berbagi, dan tumbuh. 
+        Dengan suasana tenang dan koleksi digital yang lengkap, kami hadir untuk mendukung 
+        semua pencari ilmu, dari pelajar hingga peneliti.
+      </p>
+
+      <h3>💡 Mengapa Memilih Kami?</h3>
+      <ul>
+        <li>Lingkungan belajar yang nyaman dan mendukung</li>
+        <li>Koleksi terus diperbarui sesuai kebutuhan zaman</li>
+        <li>Tim pustakawan ramah dan siap membantu</li>
+        <li>Terintegrasi dengan layanan digital nasional</li>
+      </ul>
+
+      <h3>🕒 Jam Layanan</h3>
+      <ul>
+        <li>Senin – Jumat: 08.00 – 16.00 WIB</li>
+        <li>Sabtu: 09.00 – 13.00 WIB</li>
+        <li>Minggu & Hari Libur: Tutup</li>
+      </ul>
+
+      <a href="about.html" class="btn-link">
+        <button class="btn">Lihat Selengkapnya →</button>
+      </a>
+
+      <h3 style="margin-top: 30px;">🌐 Kunjungi Perpustakaan Nasional</h3>
+      <p>
+        Ingin menjelajahi lebih banyak sumber daya? Kunjungi situs resmi 
+        <a href="https://www.perpusnas.go.id/" target="_blank" style="color: #6c5ce7; text-decoration: underline;">
+        Perpustakaan Nasional RI</a> untuk koleksi digital nasional.
+      </p>
     </div>
+  </div>
 
-    <div class="container">
-        <div class="box">
-            <h2>Temukan Ilmu, Temukan Dirimu</h2>
-            <img src="gambar.jpg" alt="Foto Perpustakaan Dwi Putri" class="rounded-circle">
-            <p>
-                Perpustakaan Dwi Putri adalah tempat yang nyaman untuk belajar, berbagi, dan tumbuh. 
-                Dengan suasana tenang dan koleksi digital yang lengkap, kami hadir untuk mendukung 
-                semua pencari ilmu, dari pelajar hingga peneliti.
-            </p>
+  <footer>
+    &copy; 2025 Perpustakaan Dwi Putri. Seluruh hak cipta dilindungi.
+  </footer>
 
-            <h3>💡 Mengapa Memilih Kami?</h3>
-            <ul>
-                <li>Lingkungan belajar yang nyaman dan mendukung</li>
-                <li>Koleksi terus diperbarui sesuai kebutuhan zaman</li>
-                <li>Tim pustakawan ramah dan siap membantu</li>
-                <li>Terintegrasi dengan layanan digital nasional</li>
-            </ul>
-
-            <h3>🕒 Jam Layanan</h3>
-            <ul>
-                <li>Senin – Jumat: 08.00 – 16.00 WIB</li>
-                <li>Sabtu: 09.00 – 13.00 WIB</li>
-                <li>Minggu & Hari Libur: Tutup</li>
-            </ul>
-
-            <a href="about.html" class="btn-link">
-                <button class="btn">Lihat Selengkapnya →</button>
-            </a>
-
-            <h3 style="margin-top: 30px;">🌐 Kunjungi Perpustakaan Nasional</h3>
-            <p>
-                Ingin menjelajahi lebih banyak sumber daya? Kunjungi situs resmi 
-                <a href="https://www.perpusnas.go.id/" target="_blank" style="color: #6c5ce7; text-decoration: underline;">
-                Perpustakaan Nasional RI</a> untuk koleksi digital nasional.
-            </p>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2025 Perpustakaan Dwi Putri. Seluruh hak cipta dilindungi.
-    </footer>
 </body>
 </html>
