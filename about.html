@@ -1,179 +1,83 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - Perpustakaan Dwi Putri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-size: 18px;
-      line-height: 1.6;
       color: #222;
     }
-
-    @keyframes fadeSlide {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
     .header {
       background: linear-gradient(90deg, #b19cd9, #a29bfe);
       color: white;
-      padding: 20px;
+      padding: 60px 0;
       text-align: center;
-      font-size: 28px;
-      animation: fadeSlide 1s ease-in-out;
     }
-
-    .nav {
-      display: flex;
-      justify-content: center;
-      background-color: #a29bfe;
-      animation: fadeSlide 1.2s ease-in-out;
-    }
-
-    .nav a {
-      color: white;
-      padding: 14px 24px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .nav a:hover {
-      background-color: #dcd6f7;
-      color: #333;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .box {
-      background: none;
-      padding: 0;
-      box-shadow: none;
-      border-radius: 0;
-      animation: none;
-    }
-
-    .box h2, .box h3 {
-      color: #6c5ce7;
-      margin-bottom: 10px;
-    }
-
-    .box p {
-      margin-bottom: 25px;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-bottom: 25px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      font-size: 16px;
-    }
-
-    th, td {
-      border: 1px solid #b19cd9;
-      text-align: left;
-      padding: 10px;
-    }
-
-    th {
-      background-color: #b19cd9;
-      color: white;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f0e6ff;
-    }
-
     .footer {
       background: linear-gradient(90deg, #d3d3d3, #e6e6e6);
       color: #333;
       text-align: center;
-      padding: 18px;
+      padding: 20px;
       font-size: 14px;
-      animation: fadeSlide 1.6s ease-in-out;
       margin-top: 60px;
+    }
+    h3 {
+      color: #4b32c3;
+    }
+    a {
+      color: #6c5ce7;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="header">About Us</div>
 
-  <div class="nav">
-    <a href="index.html">Homepage</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(90deg, #b19cd9, #a29bfe);">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Perpustakaan Dwi Putri</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabel perkalian.html">Multiplication Table</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Tentang Kami</h1>
+    <p>Perpustakaan Dwi Putri – Tempat Bertumbuh Bersama Ilmu</p>
   </div>
 
-  <div class="container">
-    <div class="box">
-      <h2>Tentang Perpustakaan Dwi Putri</h2>
-      <p>
-        Perpustakaan Dwi Putri adalah pusat sumber daya belajar yang dirancang untuk mendukung 
-        mahasiswa dan pelajar dalam mendapatkan referensi yang relevan, materi pembelajaran, 
-        dan proyek pengembangan web. Kami menyediakan berbagai koleksi buku fisik maupun digital, 
-        serta repositori tugas-tugas mahasiswa untuk meningkatkan pemahaman akademik.
-      </p>
+  <!-- Content -->
+  <div class="container py-5">
+    <h3>📚 Visi Kami</h3>
+    <p>Menjadi pusat informasi dan pengetahuan yang inovatif, ramah digital, dan inklusif bagi semua kalangan masyarakat.</p>
 
-      <h3>Jam Layanan</h3>
-      <p>Perpustakaan Dwi Putri beroperasi dengan jadwal sebagai berikut:</p>
-      <ul>
-        <li>Senin – Jumat: 08.00 – 16.00 WIB</li>
-        <li>Sabtu: 09.00 – 13.00 WIB</li>
-        <li>Minggu & Hari Libur: Tutup</li>
-      </ul>
-    </div>
+    <h3>🎯 Misi Kami</h3>
+    <ul>
+      <li>Menyediakan akses literatur berkualitas bagi pelajar, mahasiswa, dan masyarakat umum.</li>
+      <li>Mendorong budaya literasi dan pembelajaran seumur hidup.</li>
+      <li>Memberikan layanan informasi berbasis teknologi terkini.</li>
+      <li>Membangun komunitas belajar yang aktif dan kolaboratif.</li>
+    </ul>
 
-    <div class="box">
-      <h3>Layanan Perpustakaan</h3>
-      <table>
-        <tr>
-          <th>Layanan</th>
-          <th>Deskripsi</th>
-        </tr>
-        <tr>
-          <td>📖 Koleksi Buku</td>
-          <td>Beragam buku fisik dan digital untuk referensi akademik dan umum.</td>
-        </tr>
-        <tr>
-          <td>💻 Akses Jurnal Online</td>
-          <td>Jurnal internasional dan nasional yang dapat diakses secara daring.</td>
-        </tr>
-        <tr>
-          <td>📝 Repositori Tugas</td>
-          <td>Kumpulan tugas mahasiswa yang bisa dijadikan contoh dan referensi.</td>
-        </tr>
-        <tr>
-          <td>🧑‍🏫 Bimbingan Akademik</td>
-          <td>Layanan konsultasi untuk membantu pemahaman materi kuliah dan riset.</td>
-        </tr>
-        <tr>
-          <td>📚 Peminjaman Buku</td>
-          <td>Sistem peminjaman buku dengan prosedur mudah dan cepat.</td>
-        </tr>
-      </table>
-    </div>
+    <h3>🤝 Kerjasama</h3>
+    <p>Kami bekerja sama dengan perpustakaan digital nasional dan berbagai institusi pendidikan untuk mendukung pertumbuhan pengetahuan yang berkelanjutan.</p>
   </div>
 
+  <!-- Footer -->
   <div class="footer">
     &copy; 2025 Perpustakaan Dwi Putri. Seluruh hak cipta dilindungi.
   </div>
