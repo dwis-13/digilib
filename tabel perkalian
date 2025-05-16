@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabel Perkalian Interaktif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      display: inline-block;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    table {
+      border-collapse: collapse;
+      min-width: 500px;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    th {
+      background-color: #003366;
+      color: white;
+    }
+
+    td:first-child,
+    th:first-child {
+      background-color: #003366;
+      color: white;
+      font-weight: bold;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-style: italic;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Tabel Perkalian 10x10 Interaktif</h2>
+
+  <div class="table-container">
+    <table id="perkalianTable">
+      <thead>
+        <tr>
+          <th>x</th>
+          <!-- Header kolom 1–10 -->
+          <script>
+            for (let i = 1; i <= 10; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Baris tabel -->
+        <script>
+          for (let i = 1; i <= 10; i++) {
+            document.write(`<tr><th>${i}</th>`);
+            for (let j = 1; j <= 10; j++) {
+              document.write(`<td data-x="${i}" data-y="${j}" onclick="showMultiplication(this)">${i * j}</td>`);
+            }
+            document.write('</tr>');
+          }
+        </script>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">Klik sel untuk melihat hasil perkalian</div>
+
+  <script>
+    function showMultiplication(cell) {
+      const x = cell.getAttribute('data-x');
+      const y = cell.getAttribute('data-y');
+      const hasil = x * y;
+      alert(`${x} × ${y} = ${hasil}`);
+    }
+  </script>
+</body>
+</html>
