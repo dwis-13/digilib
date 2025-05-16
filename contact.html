@@ -49,32 +49,99 @@
     }
 
     .container {
-      padding: 30px 20px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .box {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      animation: fadeSlide 1.4s ease-in-out;
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      animation: none;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .box h2 {
       color: #6c5ce7;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    /* FORM STYLING */
+    .form-wrapper {
+      margin-top: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+
+    form table {
+      width: 100%;
+    }
+
+    form td {
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form button {
+      background-color: #6c5ce7;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #a29bfe;
     }
 
     .survey-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
+      margin-top: 30px;
+      padding: 12px 24px;
       background-color: #6c5ce7;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
+      color: white;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
     .survey-button:hover {
@@ -88,16 +155,7 @@
       padding: 18px;
       font-size: 14px;
       animation: fadeSlide 1.6s ease-in-out;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
-      font-size: 16px;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -121,43 +179,42 @@
       </ul>
 
       <h2>Hubungi Kami</h2>
-<p>Silakan isi formulir di bawah ini untuk mengirim pesan atau pertanyaan kepada kami:</p>
+      <p>Silakan isi formulir di bawah ini untuk mengirim pesan atau pertanyaan kepada kami:</p>
 
-<div class="form-wrapper" style="max-width: 600px; margin: auto; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  <form action="proses-formulir.php" method="post">
-    <table border="0" cellpadding="10" style="width: 100%;">
-      <tr>
-        <td><label for="nama">Nama</label></td>
-        <td><input type="text" id="nama" name="nama" required></td>
-      </tr>
-      <tr>
-        <td><label for="email">Email</label></td>
-        <td><input type="email" id="email" name="email" required></td>
-      </tr>
-      <tr>
-        <td><label for="subjek">Subjek</label></td>
-        <td><input type="text" id="subjek" name="subjek"></td>
-      </tr>
-      <tr>
-        <td><label for="pesan">Pesan</label></td>
-        <td><textarea id="pesan" name="pesan" rows="5" cols="30" required></textarea></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center;">
-          <button type="submit">Kirim</button>
-        </td>
-      </tr>
-    </table>
-  </form>
-</div>
+      <div class="form-wrapper">
+        <form action="proses-formulir.php" method="post">
+          <table>
+            <tr>
+              <td><label for="nama">Nama</label></td>
+              <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email</label></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="subjek">Subjek</label></td>
+              <td><input type="text" id="subjek" name="subjek"></td>
+            </tr>
+            <tr>
+              <td><label for="pesan">Pesan</label></td>
+              <td><textarea id="pesan" name="pesan" rows="5" required></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;">
+                <button type="submit">Kirim</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
 
-      <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
-  <a class="survey-button" href="https://forms.gle/NZM6XXTN1ZeFYYLi9" target="_blank"
-     style="padding: 12px 24px; background-color: #6c5ce7; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
-    📝 Isi Survey Kepuasan Pengguna
-  </a>
-</div>
-
+      <div style="text-align: center;">
+        <a class="survey-button" href="https://forms.gle/NZM6XXTN1ZeFYYLi9" target="_blank">
+          📝 Isi Survey Kepuasan Pengguna
+        </a>
+      </div>
+    </div>
   </div>
 
   <div class="footer">
