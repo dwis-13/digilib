@@ -352,6 +352,12 @@
       if (input === "") {
         resultsDiv.innerHTML = "<
           
+          //Menyimpan data pengguna dalam cookie
+        document.cookie ="username=cookie; expires=Fri, 31 Desember 2025 23:59:59 GMT;
+          path=/";
+        let cookies = document.cookie;
+        console.log(cookies);//Output: username=Cookie
+          
           function acceptCookies() {
       localStorage.setItem('cookieConsent', 'accepted');
       document.getElementById('cookieConsent').style.display = 'none';
