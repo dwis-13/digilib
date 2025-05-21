@@ -323,9 +323,10 @@
   </div>
 
   <div id="cookieConsent">
-    <p style="margin: 0; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+    <p style="margin: 0; font-size: 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
       <span>🔐 Kami menggunakan cookie untuk meningkatkan pengalaman kamu di situs ini.</span>
       <button onclick="acceptCookies()">Terima Semua Cookie</button>
+      <button onclick="rejectCookies()">Tolak</button>
     </p>
   </div>
 
@@ -349,3 +350,19 @@
 
       if (input === "") {
         resultsDiv.innerHTML = "<
+           function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookieConsent').style.display = 'none';
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookieConsent', 'rejected');
+      document.getElementById('cookieConsent').style.display = 'none';
+    }
+
+    window.onload = function() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === 'accepted' || consent === 'rejected') {
+        document.getElementById('cookieConsent').style.display = 'none';
+      }
+    };
